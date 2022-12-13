@@ -11,13 +11,11 @@
 
 <script>
 import TheHeader from './components/TheHeader.vue';
-import MovieSeriesFilterVue from './components/MovieSeriesFilter.vue';
-import FilmListVue from './components/FilmList.vue';
-import SerieList from './components/SerieList.vue';
+import TheMain from './components/TheMain.vue';
 import TheFooterVue from './components/TheFooter.vue';
 
 export default{
-  components:{TheHeader, MovieSeriesFilterVue, FilmListVue, SerieList, TheFooterVue},
+  components:{TheHeader, TheFooterVue},
   data() {
     return{
 

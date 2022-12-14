@@ -13,11 +13,28 @@ export function fetchMovies() {
       params : {
         api_key: "1c211dbb47ccb27813db100fe206a9a2",
         query: store.searchText,
-        language: it-IT
+        language: "it-IT"
       }
     })
     .then(resp =>{
-        console.log(resp.data.result);
+        console.log(resp);
+        console.log(resp.data.results);
+        store.movies = resp.data.results
+    })
+}
+
+
+export function fetchSeriesTv(){
+    axios.get("https://api.themoviedb.org/3/search/movie",{
+        params: {
+            api_key: "1c211dbb47ccb27813db100fe206a9a2",
+            query: store.searchText,
+        }
+    })
+    .then(resp =>{
+        console.log(resp);
+        console.log(resp.data.results);
+        store.series = resp.data.results
     })
 }
 

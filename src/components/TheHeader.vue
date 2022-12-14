@@ -4,9 +4,9 @@
             <h1 class="text-center">Boolflix</h1>
             <div class="row justify-content-center">
                 <div class="col-6">
-                    <form @submit.prevent="onSearchClick">
+                    <form >
                         <input type="text" class="form-control" v-model="store.searchText">
-                        <button type="button" class="btn btn-primary">Cerca</button>
+                        <button type="button" class="btn btn-primary" @click="onSearchClick">Cerca</button>
                     </form>
                 </div>
             </div>
@@ -30,12 +30,15 @@ export default{
     },
     methods: {
         onSearchClick(){
-            this.$emit("searc", this.searchText)  //con l'emit, poi toglila e usa lo store
-            fetchMovies()
+            console.log("click");
+            this.$emit("search", this.searchText)  //con l'emit, poi toglila e usa lo store
+
+            // fetchMovies() 
             //fetchSeriesTv()
         }
 
     }
+
 }
 </script>
 

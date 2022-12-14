@@ -4,7 +4,7 @@
             <div class="row">
 
                 <div class="col g-4" v-for="(film, index) in store.movies" key="index">
-                    <SingleCard></SingleCard>
+                    <SingleCard :movieDetail="film"></SingleCard>
 
                 </div>
             </div>

@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import {store, fetchMovies} from '../store'  //, fetchSeriesTv inserire le chiamate
+import {store, fetchMovies} from '../store'  //, fetchSeriesTv inserire le chiamate serietv
 import axios from "axios"
 export default{
     contents: {store},
@@ -33,7 +33,7 @@ export default{
     methods: {
         onSearchClick(){
             console.log("click");
-            this.$emit("search", this.searchText)  //con l'emit, poi toglila e usa lo store
+            this.$emit("search", this.searchText)  
 
             // fetchMovies() 
             //fetchSeriesTv()

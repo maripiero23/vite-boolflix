@@ -9,7 +9,7 @@ export const store = reactive({
 })
 
 export function fetchMovies() {
-    axios.get("https://api.themoviedb.org/3/search/movie" ,{
+    axios.get("https://api.themoviedb.org/3/search/movie?" ,{
       params : {
         api_key: "1c211dbb47ccb27813db100fe206a9a2",
         query: store.searchText,
@@ -17,15 +17,17 @@ export function fetchMovies() {
       }
     })
     .then(resp =>{
-        console.log(resp);
-        console.log(resp.data.results);
+        // console.log(resp);
+        // console.log(resp.data.results);
         store.movies = resp.data.results
+        console.log(store.movies)
     })
+
 }
 
 
 export function fetchSeriesTv(){
-    axios.get("https://api.themoviedb.org/3/search/movie",{
+    axios.get("https://api.themoviedb.org/3/search/tv?",{
         params: {
             api_key: "1c211dbb47ccb27813db100fe206a9a2",
             query: store.searchText,

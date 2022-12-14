@@ -1,26 +1,29 @@
 <template>
     <section>
         <div class="container">
-            <div class="row">
+            <h3>Films</h3>
+ 
+            <SingleCard :movieDetails="store.movies"></SingleCard>
 
-                <div class="col g-4" v-for="(film, index) in store.movies" key="index">
-                    <SingleCard :movieDetail="film"></SingleCard>
+            <h3>Series</h3>
+            <SingleCardSeries :seriesDetails="store.series"></SingleCardSeries>
 
-                </div>
-            </div>
+               
+            
         </div>
     </section>
 
 </template>
 
 <script>
-import AppCard from './AppCard.vue'
+
+import SingleCardSeries from './SingleCardSeries.vue'
 import SingleCard from './SingleCard.vue'
 import 'bootstrap/dist/css/bootstrap.min.css'
  import {store} from '../store'
 import axios from "axios"
 export default{
-    component: {SingleCard, AppCard},
+    components: {SingleCard, SingleCardSeries},
     data(){
         return{
             store,

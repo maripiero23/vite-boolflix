@@ -15,7 +15,7 @@ import TheHeader from './components/TheHeader.vue';
 import TheMain from './components/TheMain.vue';
 import SingleCard from './components/SingleCard.vue'
 
-import {store, fetchMovies} from './store'
+import {store, fetchMovies, fetchSeriesTv} from './store'
 import axios from 'axios'
 
 export default{
@@ -29,9 +29,11 @@ export default{
   methods: {
     doSearch(){
       fetchMovies();
+      fetchSeriesTv();
     
-      console.log("dosearch", store.searchText)
+      console.log("dosearch", store.searchText);
       //recuper input utente
+
     }
 
   }

@@ -1,13 +1,13 @@
 <template>
     <section>
         <div class="container">
-            <h1 class="text-center">Boolflix</h1>
+            <h1 class="text-center text-danger">Boolflix</h1>
             <div class="row justify-content-center">
                 <div class="col-3">
                     <form >
                         <input type="text" class="form-control" v-model="store.searchText">
                         <div class="d-flex justify-content-center">
-                            <button type="button" class="btn btn-primary mt-2" @click="onSearchClick">Cerca</button>
+                            <button type="button" class="btn btn-primary mt-2 mb-3 sm" @click="onSearchClick">Cerca</button>
                         </div>
                     </form>
                 </div>

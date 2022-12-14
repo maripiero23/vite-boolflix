@@ -2,6 +2,7 @@
     
   <TheHeader @search="doSearch"></TheHeader>
   <div class="container">
+    <SingleCard></SingleCard>
     <TheMain></TheMain>
 
   </div>

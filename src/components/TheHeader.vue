@@ -3,10 +3,12 @@
         <div class="container">
             <h1 class="text-center">Boolflix</h1>
             <div class="row justify-content-center">
-                <div class="col-6">
+                <div class="col-3">
                     <form >
                         <input type="text" class="form-control" v-model="store.searchText">
-                        <button type="button" class="btn btn-primary" @click="onSearchClick">Cerca</button>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-primary mt-2" @click="onSearchClick">Cerca</button>
+                        </div>
                     </form>
                 </div>
             </div>

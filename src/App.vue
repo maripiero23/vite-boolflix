@@ -2,7 +2,7 @@
     
   <TheHeader @search="doSearch"></TheHeader>
   <div class="container">
-    <SingleCard></SingleCard>
+    
     <TheMain></TheMain>
 
   </div>
@@ -13,13 +13,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import TheHeader from './components/TheHeader.vue';
 import TheMain from './components/TheMain.vue';
-import SingleCard from './components/SingleCard.vue'
+
 
 import {store, fetchMovies, fetchSeriesTv} from './store'
 import axios from 'axios'
 
 export default{
-  components:{TheHeader, TheMain, SingleCard},
+  components:{TheHeader, TheMain},
   data() {
     return{
       store,

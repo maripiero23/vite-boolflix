@@ -1,13 +1,15 @@
 <template>
-    <section>
+    <section class="bg-black">
         <div class="container">
-            <h1 class="text-center text-danger">Boolflix</h1>
+            <div>
+                <h1 class="text-center text-danger">Boolflix</h1>
+            </div>
             <div class="row justify-content-center">
                 <div class="col-3">
                     <form >
-                        <input type="text" class="form-control" v-model="store.searchText">
+                        <input type="text" class="form-control" v-model="store.searchText" placeholder="Che film vuoi guardare?">
                         <div class="d-flex justify-content-center">
-                            <button type="button" class="btn btn-primary mt-2 mb-3 sm" @click="onSearchClick">Cerca</button>
+                            <button type="button" class="btn btn-primary mt-2 mb-2" @click="onSearchClick">Cerca</button>
                         </div>
                     </form>
                 </div>
